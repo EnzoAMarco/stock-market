@@ -25,7 +25,7 @@ namespace backend.controllers
             return Ok(stocks);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
         public IActionResult GetById([FromRoute]int id)
         {
             var stock = _dBContext.Stocks.Find(id);
